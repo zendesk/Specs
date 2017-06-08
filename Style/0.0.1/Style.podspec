@@ -6,7 +6,6 @@ Pod::Spec.new do |s|
   The Style module of the Toolkit provides access to classes that can be used to alter the appearance of the Toolkit.
                        DESC
   s.homepage         = 'https://github.com/zendesk/mobile_toolkit_ios'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniel Sessions' => 'dsessions@zendesk.com' }
   s.source           = { :git => 'https://github.com/zendesk/mobile_toolkit_ios.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
