@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source_files = 'SignIn/**/*.{swift}'
   s.frameworks = 'GoogleSignIn','SafariServices', 'SystemConfiguration'
   s.pod_target_xcconfig = {
-	   'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleSignIn/Frameworks'
+	   'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/SignIn/Frameworks'
   }
   s.dependency '1PasswordExtension'
   s.dependency 'Style'
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
   s.dependency 'UI'
   s.dependency 'Networking'
   s.vendored_frameworks = 'Frameworks/GoogleAppUtilities.framework', 'Frameworks/GoogleSignIn.framework', 'Frameworks/GoogleSignInDependencies.framework', 'Frameworks/GoogleSymbolUtilities.framework'
-  s.resources = ['Frameworks/GoogleSignIn.bundle']
+  s.resources = 'SignIn/**/*.{xib}', 'Frameworks/GoogleSignIn.bundle'
 end
