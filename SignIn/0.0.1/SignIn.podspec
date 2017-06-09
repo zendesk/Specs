@@ -21,5 +21,6 @@ Pod::Spec.new do |s|
   s.dependency 'UI'
   s.dependency 'Networking'
   s.vendored_frameworks = 'Frameworks/GoogleAppUtilities.framework', 'Frameworks/GoogleSignIn.framework', 'Frameworks/GoogleSignInDependencies.framework', 'Frameworks/GoogleSymbolUtilities.framework'
-  s.resources = 'SignIn/**/*.{xib}', 'Frameworks/GoogleSignIn.bundle'
+  s.resources = 'SignIn/**/*.{lproj,xib}', 'Frameworks/GoogleSignIn.bundle'
+  s.resource_bundle = { "SignIn" => ["SignIn/*.lproj/*.strings"] }
 end
