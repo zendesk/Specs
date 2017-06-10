@@ -21,24 +21,5 @@ Pod::Spec.new do |s|
   s.dependency 'UI'
   s.dependency 'Networking'
   s.vendored_frameworks = 'Frameworks/GoogleAppUtilities.framework', 'Frameworks/GoogleSignIn.framework', 'Frameworks/GoogleSignInDependencies.framework', 'Frameworks/GoogleSymbolUtilities.framework'
-  s.resources = 'Frameworks/GoogleSignIn.bundle', 'SignIn/*.xib'
-  s.resource_bundle = { 'SignIn' => 'SignIn/*.lproj' }
-
-  def s.post_install(target)
-    bundle_id = 'com.zendesk.toolkit.'
-    directory = installer.config.project_pods_root + 'Target Support Files/'
-    Dir.foreach(directory) do |path|
-        full_path = directory + path
-        if File.directory?(full_path)
-            info_plist_path = full_path + 'Info.plist'
-            if File.exist?(info_plist_path)
-                text = File.read(info_plist_path)
-                new_contents = text.gsub('${PRODUCT_BUNDLE_IDENTIFIER}', bundle_id + path)
-                File.open(info_plist_path, "w") {|file| file.puts new_contents }
-            end
-        end
-    end
-  end
-
-
+  s.resources = 'Frameworks/GoogleSignIn.bundle', 'SignIn/*.xib', 'SignIn/*.lproj'
 end
