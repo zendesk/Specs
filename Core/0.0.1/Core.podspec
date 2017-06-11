@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/zendesk/mobile_toolkit_ios'
   s.author           = { 'Daniel Sessions' => 'dsessions@zendesk.com' }
   s.source           = { :git => 'https://github.com/zendesk/mobile_toolkit_ios.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'Core/**/*.{swift}'
   s.resources = 'Core/*.lproj'
 end
