@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.source_files = 'SignIn/**/*.{swift}'
   s.frameworks = 'GoogleSignIn','SafariServices', 'SystemConfiguration'
   s.pod_target_xcconfig = {
-	   'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/SignIn/Frameworks'
+	   'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/SignIn/Frameworks',
+     'OTHER_LDFLAGS' => '-ObjC'
   }
   s.dependency '1PasswordExtension'
   s.dependency 'Style'
