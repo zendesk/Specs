@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = 'https://github.com/zendesk/mobile_toolkit_ios'
   s.author           = { 'Daniel Sessions' => 'dsessions@zendesk.com' }
-  s.source           = { :git => 'https://github.com/zendesk/mobile_toolkit_ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:zendesk/mobile_toolkit_ios.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.source_files = 'Networking/**/*.{swift}'
   s.dependency 'Alamofire', '~> 4.4.0'
